@@ -371,12 +371,13 @@ section {
   height: 60px;
   display: block;
   background: none;
-  border-radius: 0;
+  border-radius: 0px;
 }
 .skills .progress .skill {
   padding: 0;
   margin: 0 0 6px 0;
   text-transform: uppercase;
+  border-radius: 15px;
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -384,15 +385,18 @@ section {
 }
 .skills .progress .skill .val {
   float: right;
+  
   font-style: normal;
 }
 .skills .progress-bar-wrap {
   background: #dce8f8;
-  height: 10px;
+  border-radius: 15px;
+  height: 11px;
 }
 .skills .progress-bar {
   width: 1px;
-  height: 10px;
+  border-radius: 15px;
+  height: 11px;
   transition: 0.9s;
   background-color: #149ddd;
 }
@@ -745,7 +749,7 @@ section {
 }
 .contact .info h4 {
   padding: 0 0 0 60px;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 5px;
   color: #050d18;
@@ -772,7 +776,7 @@ section {
   border-radius: 50%;
   text-align: center;
   width: 36px;
-  height: 36px;
+  height: 32px;
   transition: 0.3s;
   margin-right: 10px;
 }
@@ -928,7 +932,7 @@ section {
 #footer {
   padding: 15px;
   color: #f4f6fd;
-  font-size: 14px;
+  font-size: 12px;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -942,7 +946,7 @@ section {
 #footer .credits {
   padding-top: 5px;
   text-align: center;
-  font-size: 13px;
+  font-size: 10px;
   color: #eaebf0;
 }
 @media (max-width: 1199px) {
@@ -951,4 +955,10 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+
+#button-download:active{
+  top: 2px !important;
+
 }
