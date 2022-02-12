@@ -676,7 +676,7 @@ section {
 }
 .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
   color: #c3e8fa;
-  font-size: 26px;
+  font-size: 20px;
 }
 .testimonials .testimonial-item .quote-icon-left {
   display: inline-block;
@@ -690,6 +690,7 @@ section {
   top: 10px;
 }
 .testimonials .testimonial-item p {
+  font-size: 15px;
   font-style: italic;
   margin: 0 15px 15px 15px;
   padding: 20px;
