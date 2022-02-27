@@ -255,7 +255,7 @@
 
 })()
 
-
+document.getElementById("sent-msg").style.display = "none";
 
 function sendEmail() {
   Email.send({
@@ -267,6 +267,14 @@ function sendEmail() {
         Subject: document.getElementById("subject").value,
         Body: document.getElementById("body").value
       }).then(
-        message =>{alert(message);
-        document.getElementsByClassName("sent-message").style.display = "block";}
-      )};
+        
+        message =>alert(message),
+    
+        document.getElementById("sent-msg").style.display = "block"
+       
+      )
+     
+
+    };
+
+ 
