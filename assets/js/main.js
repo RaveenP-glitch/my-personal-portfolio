@@ -254,3 +254,19 @@
   });
 
 })()
+
+
+
+function sendEmail() {
+  Email.send({
+        Host: "smtp.gmail.com",
+        Username: "tech@marinelanka.lk",
+        Password: "Maritech@123",
+        To: 'raveenpanditha8@gmail.com',
+        From: document.getElementById("email").value,
+        Subject: document.getElementById("subject").value,
+        Body: document.getElementById("body").value
+      }).then(
+        message =>{alert(message);
+        document.getElementsByClassName("sent-message").style.display = "block";}
+      );

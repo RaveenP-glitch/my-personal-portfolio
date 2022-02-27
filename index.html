@@ -13,6 +13,7 @@
   <link href="assets/img/Watermark-white.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -961,7 +962,7 @@
                 </p>
                 <img src="assets/img/testimonials/testimonials-7.jpg" class="testimonial-img" alt="">
                 <h3>Gihan Bandara</h3>
-                <h4>Singer | Musician <br/>Derana Dream Star finalist</h4>
+                <h4>Singer | Musician <br />Derana Dream Star finalist</h4>
               </div>
             </div>
 
@@ -1037,7 +1038,8 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <!-- action="forms/contact.php" -->
+            <form  method="post" role="form" class="php-email-form" onsubmit="sendEmail(); reset(); return false;">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -1054,14 +1056,17 @@
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <textarea class="form-control" name="message" rows="10" required id="body"></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
-                <div class="error-message"></div>
+                <!-- <div class="error-message"></div> -->
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+
+              <div class="text-center"><button type="submit" style="border-radius: 35px; font-size: small;"
+                  id="send-button">Send Message</button></div>
+
             </form>
           </div>
 
@@ -1103,6 +1108,11 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+
 </body>
+
+
+
+
 
 </html>
