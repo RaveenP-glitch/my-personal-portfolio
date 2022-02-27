@@ -269,4 +269,4 @@ function sendEmail() {
       }).then(
         message =>{alert(message);
         document.getElementsByClassName("sent-message").style.display = "block";}
-      );
+      )};
