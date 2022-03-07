@@ -260,8 +260,8 @@ document.getElementById("sent-msg").style.display = "none";
 function sendEmail() {
   Email.send({
         Host: "smtp.gmail.com",
-        Username: "tech@marinelanka.lk",
-        Password: "Maritech@123",
+        Username: "",
+        Password: "",
         To: 'raveenpanditha8@gmail.com',
         From: document.getElementById("email").value,
         Subject: document.getElementById("subject").value,
