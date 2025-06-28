@@ -1,0 +1,68 @@
+.freebie-container {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px 0;
+}
+
+.freebie-link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.freebie-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #e9ecef;
+    transition: background-color 0.3s ease;
+}
+
+.freebie-item:last-child {
+    border-bottom: none;
+}
+
+.freebie-link:hover .freebie-item {
+    background-color: #e9ecef;
+}
+
+.freebie-icon {
+    color: #031f85;
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+.freebie-text {
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+.download-icon {
+    color: #031f85;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.freebie-link:hover .download-icon {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .freebie-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .freebie-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .download-icon {
+        margin-top: 10px;
+        opacity: 1;
+    }
+}
