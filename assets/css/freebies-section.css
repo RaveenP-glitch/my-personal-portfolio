@@ -1,68 +1,200 @@
-.freebie-container {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    padding: 15px 0;
+/* Modern Freebies Section Styling */
+.freebies {
+    padding: 60px 20px;
+}
+
+.freebie-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .freebie-link {
     text-decoration: none;
-    color: #333;
+    color: inherit;
     display: block;
     transition: all 0.3s ease;
 }
 
 .freebie-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
     display: flex;
     align-items: center;
-    padding: 12px 20px;
-    border-bottom: 1px solid #e9ecef;
-    transition: background-color 0.3s ease;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
 
-.freebie-item:last-child {
-    border-bottom: none;
+.freebie-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(135deg, #149ddd, #37b3ed);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .freebie-link:hover .freebie-item {
-    background-color: #e9ecef;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(20, 157, 221, 0.15);
+    border-color: #149ddd;
+}
+
+.freebie-link:hover .freebie-item::before {
+    transform: scaleX(1);
+}
+
+.freebie-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #149ddd, #37b3ed);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
 }
 
 .freebie-icon {
-    color: #031f85;
-    margin-right: 15px;
+    color: #fff;
     font-size: 24px;
 }
 
-.freebie-text {
-    flex-grow: 1;
-    font-weight: 500;
+.freebie-link:hover .freebie-icon-wrapper {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(20, 157, 221, 0.4);
 }
 
-.download-icon {
-    color: #031f85;
-    font-size: 24px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.freebie-content {
+    flex: 1;
+    min-width: 0;
 }
 
-.freebie-link:hover .download-icon {
-    opacity: 1;
+.freebie-content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #173b6c;
+    margin: 0 0 5px 0;
+    line-height: 1.3;
+}
+
+.freebie-content p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.freebie-action {
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.freebie-action i {
+    color: #149ddd;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.freebie-link:hover .freebie-action {
+    background: #149ddd;
+    transform: scale(1.1);
+}
+
+.freebie-link:hover .freebie-action i {
+    color: #fff;
+}
+
+/* Different blue themed icons for variety */
+.freebie-item:nth-child(odd) .freebie-icon-wrapper {
+    background: linear-gradient(135deg, #0d6efd, #6ea8fe);
+}
+
+.freebie-item:nth-child(3n) .freebie-icon-wrapper {
+    background: linear-gradient(135deg, #0984e3, #74b9ff);
+}
+
+.freebie-item:nth-child(4n) .freebie-icon-wrapper {
+    background: linear-gradient(135deg, #2d3436, #636e72);
+}
+
+.freebie-item:nth-child(5n) .freebie-icon-wrapper {
+    background: linear-gradient(135deg, #00b894, #00cec9);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .freebie-column {
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 768px) {
+    .freebies {
+        padding: 40px 15px;
+    }
+    
+    .freebie-item {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .freebie-icon-wrapper {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .freebie-icon {
+        font-size: 20px;
+    }
+    
+    .freebie-content h4 {
+        font-size: 15px;
+    }
+    
+    .freebie-content p {
+        font-size: 12px;
+    }
+    
+    .freebie-action {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .freebie-action i {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
     .freebie-item {
         flex-direction: column;
         text-align: center;
-        padding: 15px;
+        gap: 15px;
     }
-
-    .freebie-icon {
-        margin-right: 0;
-        margin-bottom: 10px;
+    
+    .freebie-content {
+        order: 2;
     }
-
-    .download-icon {
-        margin-top: 10px;
-        opacity: 1;
+    
+    .freebie-action {
+        order: 3;
+        align-self: center;
     }
 }
